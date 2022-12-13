@@ -51,7 +51,6 @@ export default class Calculator {
       this.#primaryOperand = digit;
       return;
     }
-
     this.#primaryOperand = this.#primaryOperandDisplay.dataset.value + digit;
   }
 
@@ -90,7 +89,7 @@ export default class Calculator {
     }
 
     this.clear();
-    this.#primaryOperand = result;
+    this.#primaryOperand = result.toFixed(3);
   }
 
   clear() {
